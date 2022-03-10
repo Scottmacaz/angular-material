@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { MaterialModule } from './material.module';
 import { ItsSnackBarComponent } from './its-snack-bar/its-snack-bar.component';
+import { ItsSnackBar2Component } from './its-snack-bar2/its-snack-bar2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    ItsSnackBarComponent
+    ItsSnackBarComponent,
+    ItsSnackBar2Component
   ],
   imports: [
     BrowserAnimationsModule,
