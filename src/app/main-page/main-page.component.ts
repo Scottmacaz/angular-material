@@ -45,7 +45,7 @@ export class MainPageComponent implements OnInit {
         this.snackBar.openFromComponent(ItsSnackBar2Component, {
           data: {
             snackBarRef,
-            message: "This is a test 123 ....."
+            message: "This is a test 123 blah  blah blah blah blah blah blah blah....."
           },
           duration: 300000000,
           horizontalPosition: 'center',

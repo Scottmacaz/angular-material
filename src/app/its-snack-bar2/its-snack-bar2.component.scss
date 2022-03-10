@@ -1,3 +1,8 @@
-// .its-snack-bar {
-//     background: #007249
-// }
+.its-snack-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    cursor: pointer;
+}
