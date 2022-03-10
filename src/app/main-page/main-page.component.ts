@@ -20,7 +20,7 @@ export class MainPageComponent implements OnInit {
 
   pushMe() {
     //this.itsSnackBar.open({message:"Testing 123", duration: undefined});
-    this.itsSnackBar.open({message:"Testing 123", duration: 3000});
+    this.itsSnackBar.open({message:"Testing 123", color: 'mat-primary'});
     console.log("push me pushed ....");
     this.pushed = true;
     this.pushMeService.pushMe().pipe(delay(3000)).subscribe( () => {

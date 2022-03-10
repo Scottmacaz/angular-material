@@ -15,14 +15,20 @@ export class ItsSnackBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //NOTE: close should be a graphic "X".  See Pizza party example here: https://material.angular.io/components/snack-bar/examples
+
+
   /**
    * 
    * @param params 
    * duration is in milliseconds.  To dismiss the snack bar manually set duration to undefined and call dismiss().
    * color is 'mat-primary' to 'mat-accent' or 'mat-warn'
    */
-  open(params: {message: string, color?: 'mat-primary', duration?: 3000}) {
-    this.matSnackBar.open(params.message, 'Dismiss', {
+  open(params: {message: string, color?: string, duration?: 3000}) {
+    if (params.color === undefined) {
+      params.color = 'mat-primary';
+    }
+    this.matSnackBar.open(params.message, 'X', {
       horizontalPosition: 'center',
       verticalPosition: 'top',
       duration: params.duration,
