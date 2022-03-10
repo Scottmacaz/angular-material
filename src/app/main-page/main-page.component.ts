@@ -35,8 +35,12 @@ export class MainPageComponent implements OnInit {
         })
       }
 
-      openFromComponent() {
-        //this.itsSnackBar.open({message:"Testing 123", duration: undefined});
+      openFromComponent(status:string) {
+        
+        //Only two options right now but not using a bool in case more are added.  Example a "warn" status.
+        debugger;
+        let colorClass = status === 'success' ? 'green-snack-bar' : 'red-snack-bar';
+        
         var snackBarRef: any;
         this.snackBar.openFromComponent(ItsSnackBar2Component, {
           data: {
@@ -46,6 +50,7 @@ export class MainPageComponent implements OnInit {
           duration: 300000000,
           horizontalPosition: 'center',
           verticalPosition: 'top',
+          panelClass: ['mat-toolbar',  colorClass]
         });
         this.pushed = true;
         this.pushMeService.pushMe().pipe(delay(3000)).subscribe( () => {

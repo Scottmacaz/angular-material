@@ -16,11 +16,8 @@ export class ItsSnackBar2Component implements OnInit{
     @Inject(MAT_SNACK_BAR_DATA) public data: any,) { }
 
   ngOnInit(): void {
-    debugger;
     this.message = this.data.message;
     console.log(this.message);
   }
-
-  
 
 }

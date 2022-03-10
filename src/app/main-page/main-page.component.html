@@ -1,3 +1,4 @@
 <p>main-page works!</p>
 <p><button mat-raised-button (click)="open()" [disabled]="pushed">Open</button></p>
-<p><button mat-raised-button (click)="openFromComponent()" [disabled]="pushed">Open From Component</button></p>
+<p><button mat-raised-button (click)="openFromComponent('success')" [disabled]="pushed">Open Success From Component</button></p>
+<p><button mat-raised-button (click)="openFromComponent('error')" [disabled]="pushed">Open Error From Component</button></p>
